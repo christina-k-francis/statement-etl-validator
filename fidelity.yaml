@@ -1,6 +1,6 @@
 name: Fidelity Investments brokerage statement configuration
 brokerage: "Fidelity Investments" 
-description: parameters for extraction + parsing + self-correcting validation workflows
+description: parameters for extraction + parsing + self-correcting validation + postgres upload workflows
 
 extraction:
   # path for sourcing statement pdf
@@ -49,3 +49,13 @@ llm_validation:
   llm_validation_filename: "./Fidelity_Investments/2_llm_validation_report.txt"
   # filepath for ledger tracking issue evaluation, corrections/changes, and validation results
   ledger_filepath: './Fidelity_Investments/3_issue_validation_ledger.txt'
+
+postgres:
+  # target Postgres database name
+  db_name: "fidelity_investments"
+  # target table name within the database
+  table_name: "brokerage_statement"
+  # connection parameters (password sourced exclusively from env var PSQL_PWD)
+  host: "localhost"
+  port: 5432
+  user: "postgres"
