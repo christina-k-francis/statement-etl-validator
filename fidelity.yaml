@@ -55,6 +55,8 @@ postgres:
   db_name: "fidelity_investments"
   # target table name within the database
   table_name: "brokerage_statement"
+  # path to directory containing portfolio analysis SQL view scripts
+  sql_dir: "./sql"
   # connection parameters (password sourced exclusively from env var PSQL_PWD)
   host: "localhost"
   port: 5432

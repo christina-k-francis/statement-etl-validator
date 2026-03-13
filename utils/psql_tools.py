@@ -1,14 +1,11 @@
 """
-Postgres connection and upload utilities for the financial data pipeline.
-
-Provides:
-    get_engine()        — build a SQLAlchemy engine, creating the DB if absent
-    upload_holdings()   — upload a holdings DataFrame to a Postgres table
+Helpful FXs for Postgres connection and uploads via the financial data pipeline.
 """
 
 import os
+import glob
 import pandas as pd
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 from sqlalchemy_utils import database_exists, create_database
 
 
@@ -71,3 +68,41 @@ def upload_holdings(
         index=False,
     )
     print(f"  Uploaded {len(holdings_df)} rows → table '{table_name}'")
+
+
+# ---------------------------------------------------------------------------
+# Views
+# ---------------------------------------------------------------------------
+
+def create_views(engine, sql_dir: str) -> None:
+    """
+    Execute all SQL view scripts in sql_dir against the connected database.
+
+    Each .sql file is read in filename order (01_, 02_, 03_, ...) and executed
+    in a single transaction. All CREATE OR REPLACE VIEW statements persist in
+    Postgres and are immediately queryable after this call.
+
+    Args:
+        engine:  SQLAlchemy engine from get_engine().
+        sql_dir: Path to the directory containing the .sql view scripts.
+                 Expected files:
+                   01_portfolio_overview.sql
+                   02_gain_loss_analysis.sql
+                   03_income_and_yield_analysis.sql
+
+    Returns:
+        None
+    """
+    sql_files = sorted(glob.glob(os.path.join(sql_dir, "*.sql")))
+
+    if not sql_files:
+        print(f"  Warning: no .sql files found in '{sql_dir}'. No views created.")
+        return
+
+    with engine.begin() as conn:
+        for sql_path in sql_files:
+            script_name = os.path.basename(sql_path)
+            with open(sql_path, "r") as f:
+                sql = f.read()
+            conn.execute(text(sql))
+            print(f"  Views created from: {script_name}")

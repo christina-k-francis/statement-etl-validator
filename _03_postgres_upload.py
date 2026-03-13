@@ -28,10 +28,6 @@ def postgres_upload_flow(cfg: dict) -> None:
         Reads the validated holdings CSV produced by _02_llm_validation.py
         and uploads it to the configured Postgres database and table.
 
-        Connection parameters (host, port, user) are sourced from the YAML
-        config block 'postgres'. The password is sourced exclusively from
-        the environment variable PSQL_PWD.
-
     Input:
         cfg: Full YAML config dict. Expected keys under 'postgres':
                db_name    — target Postgres database name
@@ -56,6 +52,7 @@ def postgres_upload_flow(cfg: dict) -> None:
 
     # --- Postgres connection params ---
     db_name    = pscfg["db_name"]
+    sql_dir    = pscfg["sql_dir"]
     table_name = pscfg["table_name"]
     host       = pscfg.get("host", "localhost")
     port       = str(pscfg.get("port", "5432"))
@@ -91,6 +88,9 @@ def postgres_upload_flow(cfg: dict) -> None:
     print(f"  Database:     {db_name}")
     print(f"  Table:        {table_name}")
     print(f"  Rows written: {len(holdings_df)}")
+
+    # --- Executing SQL analysis scripts ---
+    psql.create_views(engine, sql_dir)
 
 
 # Standalone execution: python _03_postgres_upload.py <config.yaml>

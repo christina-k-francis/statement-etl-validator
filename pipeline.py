@@ -23,7 +23,6 @@ from _01_parse_holdings   import parsing_flow
 from _02_llm_validation   import self_correcting_llm_validation_flow
 from _03_postgres_upload  import postgres_upload_flow
 
-
 def load_config(config_path: str) -> dict:
     """Load and return the full YAML config dict from the given path."""
     with open(config_path, 'r') as f:
@@ -64,7 +63,7 @@ def full_pipeline_flow(cfg: dict) -> None:
     print('--' * 50)
     print('\n')
 
-    # Stage 4: Upload validated holdings CSV to Postgres
+    # Stage 4: Upload validated holdings CSV to Postgres + Executing Analysis scripts
     postgres_upload_flow(cfg)
     print('--' * 50)
     print('\n')
