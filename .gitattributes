@@ -1,0 +1,7 @@
+# SQL files
+*.sql linguist-detectable=true
+*.sql linguist-language=SQL
+
+# Exclude non-code files from language stats 
+*.md linguist-documentation=true
+#*.ipynb linguist-documentation=true
