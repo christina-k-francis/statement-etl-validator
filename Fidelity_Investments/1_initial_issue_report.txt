@@ -1,0 +1,18 @@
+INITIAL ISSUE REPORT:
+Total Issues Found: 9
+
+NEGATIVE VALUES (3 issues):
+  - Negative Quantity = -100.0 for ENSTAR GROUP LIMITED COM STK USD 1.00
+  - Negative Cost Basis = -14510.99 for ENSTAR GROUP LIMITED COM STK USD 1.00
+  - Negative Market Value = -13710.0 for ENSTAR GROUP LIMITED COM STK USD 1.00
+
+MISSING SYMBOL/CUSIP (1 issues):
+  - Missing Symbol/CUSIP for SOUTHWEST ROYALTIES INSTITUTIONAL INCOME FUND LP IX-B Based on an independent appraisal
+
+TOTAL MISMATCHES (5 issues):
+  - Table 14: Cost Basis sum/total mismatch — Expected: $8,354.44, Calculated: $16,601.94
+  - Table 14: Market Value sum/total mismatch — Expected: $16,304.65, Calculated: $32,063.95
+  - Table 14: Unrealized Gain/Loss sum/total mismatch — Expected: $7,950.21, Calculated: $15,462.01
+  - Table 30: Market Value sum/total mismatch — Expected: $99,215.84, Calculated: $112,348.59
+  - Table 32: Market Value sum/total mismatch — Expected: $5,651.40, Calculated: $3,643.10
+

@@ -1,0 +1,87 @@
+VALIDATION LEDGER
+Model: gemini-2.5-flash
+Total iterations recorded: 2
+
+────────────────────────────────────────────────────────────────────────
+ITERATION 1  —  13 issue(s) evaluated
+────────────────────────────────────────────────────────────────────────
+
+  MISSING SYMBOL/CUSIP:
+    [CONFIRMED] Missing Symbol/CUSIP for SOUTHWEST ROYALTIES INSTITUTIONAL INCOME FUND LP IX-B Based on an independent appraisal
+      Reason: The PDF lists the security 'SOUTHWEST ROYALTIES INSTITUTIONAL INCOME FUND LP IX-B' on page 22 under 'Other' holdings for Account 222-222222, but no ticker symbol, CUSIP, or ISIN is provided alongside its description or in any related footnotes.
+
+  MISSING FINANCIAL DATA:
+    [CONFIRMED] Missing Cost Basis for FDIC INSURED DEPOSIT AT FIFTH THIRD BANK IRA NOT COVERED BY SIPC
+      Reason: The PDF explicitly states 'N/A' for the Total Cost Basis of this security on page 6.
+    [CONFIRMED] Missing Cost Basis for FIDELITY INSTL MMKT PORT CL I
+      Reason: The PDF explicitly states 'N/A' for the Total Cost Basis of this security on page 6.
+    [CONFIRMED] Missing Cost Basis for FIDELITY CASH RESERVES
+      Reason: The PDF explicitly states 'N/A' for the Total Cost Basis of this security on page 21.
+    [CONFIRMED] Missing Cost Basis for GENERAL MOTORS CO USD0.01
+      Reason: The PDF explicitly states 'unknown' for the Total Cost Basis of this security on page 21.
+    [FALSE POSITIVE] Missing Cost Basis for SABRATEK CORP NT CV
+      Reason: The PDF shows a Total Cost Basis of $10,000.00t for this security on page 22.
+    [CONFIRMED] Missing Cost Basis for GENERAL MTRS CO WTS EXP 07/10/2016
+      Reason: The PDF explicitly states 'unknown' for the Total Cost Basis of this security on page 22.
+    [CONFIRMED] Missing Cost Basis for SOUTHWEST ROYALTIES INSTITUTIONAL INCOME FUND LP IX-B Based on an independent appraisal
+      Reason: The PDF explicitly states 'unknown' for the Total Cost Basis of this security on page 22.
+    [CONFIRMED] Missing Cost Basis for NH Portfolio 2015
+      Reason: The 'Holdings' table on page 25 for this account type does not include a 'Cost Basis' column.
+    [CONFIRMED] Missing Cost Basis for NH Moderate Growth Port
+      Reason: The 'Holdings' table on page 25 for this account type does not include a 'Cost Basis' column.
+
+  NEGATIVE VALUES:
+    [CONFIRMED] Negative Quantity = -100.0 for ENSTAR GROUP LIMITED COM STK USD 1.00
+      Reason: The PDF on page 7 explicitly shows a quantity of -100.00 for this security.
+    [CONFIRMED] Negative Cost Basis = -14510.99 for ENSTAR GROUP LIMITED COM STK USD 1.00
+      Reason: The PDF on page 7 explicitly shows a Total Cost Basis of -14,510.99 for this security.
+    [CONFIRMED] Negative Market Value = -13710.0 for ENSTAR GROUP LIMITED COM STK USD 1.00
+      Reason: The PDF on page 7 explicitly shows an Ending Market Value of -13,710.00 for this security.
+
+  No corrections applied this iteration.
+
+────────────────────────────────────────────────────────────────────────
+ITERATION 2  —  0 issue(s) evaluated
+────────────────────────────────────────────────────────────────────────
+
+  No corrections applied this iteration.
+
+────────────────────────────────────────────────────────────────────────
+HOLDINGS CHANGES SUMMARY  —  0 cell(s) written
+────────────────────────────────────────────────────────────────────────
+  No cells were written to holdings.csv.
+
+────────────────────────────────────────────────────────────────────────
+FINAL ISSUE DISPOSITION  —  13 unique issue(s)
+────────────────────────────────────────────────────────────────────────
+
+  [CONFIRMED] (12 issue(s)):
+    - Missing Cost Basis for FDIC INSURED DEPOSIT AT FIFTH THIRD BANK IRA NOT COVERED BY SIPC
+    - Missing Cost Basis for FIDELITY CASH RESERVES
+    - Missing Cost Basis for FIDELITY INSTL MMKT PORT CL I
+    - Missing Cost Basis for GENERAL MOTORS CO USD0.01
+    - Missing Cost Basis for GENERAL MTRS CO WTS EXP 07/10/2016
+    - Missing Cost Basis for NH Moderate Growth Port
+    - Missing Cost Basis for NH Portfolio 2015
+    - Missing Cost Basis for SOUTHWEST ROYALTIES INSTITUTIONAL INCOME FUND LP IX-B Based on an independent appraisal
+    - Missing Symbol/CUSIP for SOUTHWEST ROYALTIES INSTITUTIONAL INCOME FUND LP IX-B Based on an independent appraisal
+    - Negative Cost Basis = -14510.99 for ENSTAR GROUP LIMITED COM STK USD 1.00
+    - Negative Market Value = -13710.0 for ENSTAR GROUP LIMITED COM STK USD 1.00
+    - Negative Quantity = -100.0 for ENSTAR GROUP LIMITED COM STK USD 1.00
+
+  [FALSE POSITIVE] (1 issue(s)):
+    - Missing Cost Basis for SABRATEK CORP NT CV
+
+  [CONFIRMED] (12 issue(s)):
+    - Missing Cost Basis for FDIC INSURED DEPOSIT AT FIFTH THIRD BANK IRA NOT COVERED BY SIPC
+    - Missing Cost Basis for FIDELITY CASH RESERVES
+    - Missing Cost Basis for FIDELITY INSTL MMKT PORT CL I
+    - Missing Cost Basis for GENERAL MOTORS CO USD0.01
+    - Missing Cost Basis for GENERAL MTRS CO WTS EXP 07/10/2016
+    - Missing Cost Basis for NH Moderate Growth Port
+    - Missing Cost Basis for NH Portfolio 2015
+    - Missing Cost Basis for SOUTHWEST ROYALTIES INSTITUTIONAL INCOME FUND LP IX-B Based on an independent appraisal
+    - Missing Symbol/CUSIP for SOUTHWEST ROYALTIES INSTITUTIONAL INCOME FUND LP IX-B Based on an independent appraisal
+    - Negative Cost Basis = -14510.99 for ENSTAR GROUP LIMITED COM STK USD 1.00
+    - Negative Market Value = -13710.0 for ENSTAR GROUP LIMITED COM STK USD 1.00
+    - Negative Quantity = -100.0 for ENSTAR GROUP LIMITED COM STK USD 1.00

@@ -1,0 +1,51 @@
+name: Fidelity Investments brokerage statement configuration
+brokerage: "Fidelity Investments" 
+description: parameters for extraction + parsing + self-correcting validation workflows
+
+extraction:
+  # path for sourcing statement pdf
+  file_path: "./Fidelity_Investments/sample-new-fidelity-acnt-stmt.pdf"
+  # directory for output CSVs
+  output_dir: "./Fidelity_Investments/Fidelity_CSVs"
+  # CSV filename prefixes -> "{csv_prefix}_table_.csv"
+  csv_prefix: "fidelity"
+
+  # Gemini model endpoint for specifying API model version
+  gemini_api_url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
+
+  # API call retry params
+  max_retries: 3
+  retry_delay_seconds: 5
+  
+  # Number of pdf pages per API call
+  batch_size: 7
+  batch_delay_seconds: 2
+
+  # image quality for LLM viewing
+  pdf_dpi: 390
+
+  # Gemini's recommended max. pixel dimension is 2048 
+  max_image_dimension: 2048
+
+  # PNG compression level (0 = no compression, 9 = maximum).
+  png_compression: 9
+
+parsing:
+  # directory for sourcing CSVs (should match extraction output_dir)
+  csv_dir: "./Fidelity_Investments/Fidelity_CSVs"
+  # CSV filename prefixes (should match extraction csv_prefix)
+  csv_prefix: "fidelity_table_"
+  # root directory for storing final holdings csv + vallidation report
+  primary_dir: "./Fidelity_Investments"
+  # filelname for final holdings csv output
+  holdings_filename: "holdings_Fidelity.csv"
+  # filename for validation report
+  initial_issue_filename: "1_initial_issue_report.txt"
+
+llm_validation:
+  # brokerage statement pdf file location
+  pdf_file: "./Fidelity_Investments/sample-new-fidelity-acnt-stmt.pdf"
+  # directory for storing output llm-assisted self-correcting validation report
+  llm_validation_filename: "./Fidelity_Investments/2_llm_validation_report.txt"
+  # filepath for ledger tracking issue evaluation, corrections/changes, and validation results
+  ledger_filepath: './Fidelity_Investments/3_issue_validation_ledger.txt'

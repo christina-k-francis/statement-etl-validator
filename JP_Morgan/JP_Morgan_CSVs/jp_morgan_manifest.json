@@ -1,0 +1,21 @@
+{
+  "source_file": "./Full_Pipeline/JP_Morgan/Brokerage_March2021.pdf",
+  "total_pages": 20,
+  "total_batches": 3,
+  "total_tables": 12,
+  "output_files": [
+    "./Full_Pipeline/JP_Morgan/JP_Morgan_CSVs\\jp_morgan_table_1.csv",
+    "./Full_Pipeline/JP_Morgan/JP_Morgan_CSVs\\jp_morgan_table_2.csv",
+    "./Full_Pipeline/JP_Morgan/JP_Morgan_CSVs\\jp_morgan_table_3.csv",
+    "./Full_Pipeline/JP_Morgan/JP_Morgan_CSVs\\jp_morgan_table_4.csv",
+    "./Full_Pipeline/JP_Morgan/JP_Morgan_CSVs\\jp_morgan_table_5.csv",
+    "./Full_Pipeline/JP_Morgan/JP_Morgan_CSVs\\jp_morgan_table_6.csv",
+    "./Full_Pipeline/JP_Morgan/JP_Morgan_CSVs\\jp_morgan_table_7.csv",
+    "./Full_Pipeline/JP_Morgan/JP_Morgan_CSVs\\jp_morgan_table_8.csv",
+    "./Full_Pipeline/JP_Morgan/JP_Morgan_CSVs\\jp_morgan_table_9.csv",
+    "./Full_Pipeline/JP_Morgan/JP_Morgan_CSVs\\jp_morgan_table_10.csv",
+    "./Full_Pipeline/JP_Morgan/JP_Morgan_CSVs\\jp_morgan_table_11.csv",
+    "./Full_Pipeline/JP_Morgan/JP_Morgan_CSVs\\jp_morgan_table_12.csv"
+  ],
+  "failed_page_ranges": []
+}

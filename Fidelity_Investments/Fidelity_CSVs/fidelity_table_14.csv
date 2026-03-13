@@ -1,0 +1,10 @@
+Description,Quantity,Price Per Unit,Ending Market Value,Total Cost Basis,Unrealized Gain/Loss,Est. Annual Income (EAI),Est. Yield (EY)
+Common Stocks,,,,,,,
+APPLE INC (AAPL),25.00,525.31,"$13,132.75","$9,350.12*","$3,782.63",$304.68,2.32%
+AMERCO COM (UHAL),30.00,203.15A,"6,094.50","4,149.75*","1,944.75",--,--
+ENSTAR GROUP LIMITED COM STK USD 1.00 (ESGR),-100.00,137.10,"-13,710.00","-14,510.99*",800.99,--,--
+Total Common Stock (24% of account holdings) Preferred Stocks,,,"$5,517.25","-$1,011.12","$6,528.37",$304.68,
+BANK AMER CORP DEP SHS REPSTG 1/1200TH PFD SER 5 (BMLPRL),150.00,$20.230,"$3,034.50","$2,470.16",$564.34,,
+MCITIGROUP INC DEP SH REP STG 1/100TH INT NON CUMULATIVE PFD SER F 8.50% (CPRM) ISIN: US1729675561,300.00,25.843,"7,752.90","6,895.40",857.50,,
+Total Preferred Stock (8% of account holdings),,,"$10,787.40","$9,365.56","$1,421.84",,
+Total Stocks (32% of account holdings),,,"$43,724.65","$37,376.42","$6,348.23",$304.68,
